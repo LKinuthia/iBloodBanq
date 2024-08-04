@@ -1,0 +1,122 @@
+/* General page styles */
+.requests-page {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    bottom: 0;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar.open {
+    left: 0; /* Slide in when open */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar li:hover {
+    background-color: #ddd;
+    transform: translateX(10px);
+}
+
+.sidebar li.active {
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+/* Sidebar toggle button */
+.sidebar-toggles {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Requests container */
+.requests-container {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    width: 100%;
+}
+
+/* Shift content when sidebar is open */
+.requests-container.shifted {
+    margin-left: 250px; /* Adjust according to the sidebar width */
+}
+
+/* Requests list */
+.requests-list {
+    list-style: none;
+    padding: 0;
+}
+
+.request-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.request-item.emergency {
+    border: 2px solid red; 
+}
+
+.request-details p {
+    margin: 5px 0;
+}
+
+.request-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.approve-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.reject-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.emergency-label {
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

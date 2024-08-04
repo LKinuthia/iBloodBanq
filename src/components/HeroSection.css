@@ -1,0 +1,141 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.hero-container {
+    background: url('/images/img-1.png') center center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align items to the right */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    /* object-fit: contain; */
+    padding-right: 50px;
+    /* Add padding to the right for some space */
+    position: relative;
+    /* Ensure positioning for boxes */
+}
+
+.hero-container>h1 {
+    color: #000;
+    font-size: 60px;
+    margin-top: -100px;
+    text-align: right;
+    /* Align text to the right */
+
+}
+
+.hero-container>p {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+    /* Align text to the right */
+
+}
+
+.hero-btns {
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-end;
+    /* Align buttons to the right */
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    transform: translateY(-50%);
+    margin-top: -5px;
+    z-index: 1;
+    padding: 20px;
+}
+
+.box {
+    background: #610834;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.box p {
+    margin-top: 0;
+    color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-container>h1 {
+        font-size: 70px;
+        margin-top: -150px;
+    }
+
+    .boxes {
+        transform: translateY(0);
+        /* Reset transform */
+        flex-direction: column;
+        /* Stack boxes vertically */
+        align-items: center;
+        margin-top: 20px;
+        /* Add margin to space the boxes below the hero section */
+    }
+
+    .box {
+        margin: 10px 0;
+        /* Adjust margin for vertical stacking */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        align-items: center;
+        /* Center items on small screens */
+        padding-right: 0;
+        /* Remove right padding */
+    }
+
+    .hero-container>h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+
+    .hero-container>p {
+        font-size: 30px;
+    }
+
+    .hero-btns {
+        align-items: center;
+        /* Center buttons on small screens */
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

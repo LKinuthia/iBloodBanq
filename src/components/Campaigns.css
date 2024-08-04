@@ -1,0 +1,98 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.campaign-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.line {
+    flex: 100;
+    height: 2px;
+    background-color: #B32346;
+}
+
+.underline-image {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+    /* control space between lines and image */
+}
+
+.campaign-container h1 {
+    /* font-size: 2.5em; */
+    margin-bottom: 20px;
+    color: #000;
+    /* Optional: Change the color to match your theme */
+}
+
+.campaign-description {
+    /* font-size: 1.2em; */
+    margin-bottom: 40px;
+    color: #000;
+    width: 80%;
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-button {
+    padding: 10px 20px;
+    background-color: #1E2833; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.campaign-button:hover {
+    background-color: #8C1E3D; /* Darker shade for hover effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .campaign-description {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .image-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-section img {
+        width: 80%;
+        max-width: none;
+        margin-bottom: 20px;
+        /* Space between images */
+    }
+}

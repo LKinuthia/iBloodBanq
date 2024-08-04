@@ -1,0 +1,98 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 70%; /* Cover 80% of the viewport width */
+    margin: 0 auto; /* Center horizontally */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid container for left and right sections */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    height: 100%; /* Full height of the grid container */
+}
+
+/* Left grid section */
+.left-grid {
+    background-color: #ffff;
+    color: green;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.left-section img {
+    height: 400px;
+    width: 400px;
+}
+
+/* Right grid section */
+.right-grid {
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px; 
+}
+
+.right-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1E2833;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #6A0B37;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .left-grid {
+        display: none; /* Hide the left grid section on smaller screens */
+    }
+    .right-grid {
+        grid-column: 1 / -1; /* Span across all columns */
+    }
+}

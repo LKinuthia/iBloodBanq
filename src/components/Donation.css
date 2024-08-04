@@ -1,0 +1,119 @@
+.donation-process {
+    width: 100%;
+    background: #fff; /* White background */
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+}
+
+.donation-process h1 {
+    color: #B32346; /* Main heading color */
+    margin-bottom: 20px;
+}
+
+.underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background-color: #b32346;
+}
+
+.underline-image {
+    width: 40px;
+    height: auto;
+    margin: 0 10px; /* Control space between lines and image */
+}
+
+.step-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.step.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.step-image {
+    max-width: 100px; /* Adjust as needed */
+    max-height: 100px; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.step-content {
+    color: #000;
+}
+
+.step-content h2 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #333;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.donate-button {
+    padding: 15px 30px;
+    background-color: #1E2833;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #A2223E;
+}
+
+/* Adjust for responsiveness */
+@media screen and (max-width: 768px) {
+    .donation-process {
+        padding: 30px 10px;
+    }
+
+    .step-image {
+        max-width: 80px; /* Adjust as needed */
+        max-height: 80px; /* Adjust as needed */
+    }
+
+    .step-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .step-content p {
+        font-size: 1rem;
+    }
+}
